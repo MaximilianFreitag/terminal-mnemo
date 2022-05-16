@@ -1,4 +1,4 @@
-## Hello World <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">
+Hello World <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">
 
 
 I'm a german, self-study programmer who likes to create CS related projects in his freetime 🇩🇪
