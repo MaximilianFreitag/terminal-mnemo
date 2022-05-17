@@ -100,9 +100,9 @@ export const whoami = async (args: string[]): Promise<string> => {
 };
 
 export const ls = async (args: string[]): Promise<string> => {
-  return `a
-bunch
-of
+  return `ein
+paar
+erfundene
 fake
 directories`;
 };
@@ -139,6 +139,6 @@ export const banner = (args?: string[]): string => {
 
 Gebe 'help' ein, um die Liste der verfügbaren Befehle anzuzeigen.
 Gebe 'bio' ein um die Übersicht über meine Bio aufzurufen.
-Gebe 'repo' oder klicke <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> für mein github repository.
+Gebe 'repo' oder klicke <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">hier</a></u> für mein github repository.
 `;
 };
