@@ -37,15 +37,19 @@ Mehr über mich:
 'readme' - mein github readme.`;
 };
 
+
+
+
 export const resume = async (args: string[]): Promise<string> => {
   window.open(`${config.resume_url}`);
   return 'Lebenslauf wird geöffnet...';
+  
 };
 
 // Money
 export const money = async (args: string[]): Promise<string> => {
   return ` 
-Wenn ich dir Geld schulde oder du mir dann kannst du diesen Link klicken:
+Wenn ich dir oder du mir Geld schuldest, dann kannst du diesen Link klicken:
 - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.money_urls.paypal}" target="_blank">paypal</a></u>
 
 `;
@@ -71,23 +75,41 @@ export const linkedin = async (args: string[]): Promise<string> => {
 
 // Search
 export const google = async (args: string[]): Promise<string> => {
-  window.open(`https://google.com/search?q=${args.join(' ')}`);
-  return `Suche Google nach ${args.join(' ')}...`;
+
+    //if the input is empty display a message
+    if (args.length === 0) {
+        return 'Befehl: google [Suchbegriff]. Beispiel: google favicon';
+    }
+    else {
+    window.open(`https://google.com/search?q=${args.join(' ')}`);
+    return `Suche Google nach ${args.join(' ')}...`;
+    }
 };
 
 export const duckduckgo = async (args: string[]): Promise<string> => {
-  window.open(`https://duckduckgo.com/?q=${args.join(' ')}`);
-  return `Suche duckduckgo nach ${args.join(' ')}...`;
+  if (args.length === 0) {
+    return 'Befehl: duckduckgo [Suchbegriff]. Beispiel: duckduckgo gitignore';
+}
+  else {
+    window.open(`https://duckduckgo.com/?q=${args.join(' ')}`);
+    return `Suche duckduckgo nach ${args.join(' ')}...`;
+  }
 };
 
-export const bing = async (args: string[]): Promise<string> => {
-  window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `Wer benutzt heutzutage noch Bing? Das sind die Ergebnisse für ${args.join(' ')}?`;
-};
+//export const bing = async (args: string[]): Promise<string> => {
+//  window.open(`https://bing.com/search?q=${args.join(' ')}`);
+//  return `Wer benutzt heutzutage noch Bing? Das sind die Ergebnisse für ${args.join(' ')}?`;
+//};
 
 export const reddit = async (args: string[]): Promise<string> => {
-  window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
-  return `Suche reddit nach ${args.join(' ')}...`;
+  
+  if (args.length === 0) {
+    return 'Befehl: reddit [Suchbegriff]. Beispiel: reddit programming';
+}
+  else {
+    window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
+    return `Suche reddit nach ${args.join(' ')}...`;
+  }
 };
 
 // Typical linux commands
@@ -118,9 +140,11 @@ export const date = async (args: string[]): Promise<string> => {
 
 
 export const sudo = async (args?: string[]): Promise<string> => {
-  window.open('https://www.youtube.com/watch?v=176WobDw3YA', '_blank'); 
+  //window.open('https://www.youtube.com/watch?v=176WobDw3YA', '_blank'); 
   return `Zugriff verweigert: Nur Max Mnemo hat Zugriff auf admin Rechte `;
 };
+
+
 
 // Banner
 export const banner = (args?: string[]): string => {
