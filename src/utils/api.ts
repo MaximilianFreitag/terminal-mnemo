@@ -35,7 +35,7 @@ export const getZufallswort = async () => {
   try
   {
     const { data } = await axios.get('https://zufallsworte.herokuapp.com/wort');
-    return data;
+    zufallswort: data.word,
   }
   catch (error)
   {
