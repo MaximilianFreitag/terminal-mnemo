@@ -32,13 +32,10 @@ export const getQuote = async () => {
 
 
 export const getZufallswort = async () => {
-  try
-  {
-    const { data } = await axios.get('https://zufallsworte.herokuapp.com/wort');
-    zufallswort: data.word,
-  }
-  catch (error)
-  {
-    return error;
-  }
+  
+  const { data } = await axios.get('https://random-word-api.herokuapp.com/word?number=1');
+  return {
+    zufallswort: data[0],
+  };
 }
+ 
