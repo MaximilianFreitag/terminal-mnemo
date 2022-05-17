@@ -26,8 +26,9 @@ export const quote = async (args: string[]): Promise<string> => {
 
 export const zufallswort = async (args: string[]): Promise<string> => {
   const data = await getZufallswort();
-  return data.word;
+  return data.zufallswort;
 };
+
 
 
 
